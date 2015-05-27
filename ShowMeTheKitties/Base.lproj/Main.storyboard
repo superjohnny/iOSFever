@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ex0-eD-tSS">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Top Cats!-->
+        <scene sceneID="M89-cy-uIW">
+            <objects>
+                <tableViewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bpo-TV-nw1" customClass="MainViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MainTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="133" sectionHeaderHeight="22" sectionFooterHeight="22" id="u9r-fp-e6r">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CatCell" rowHeight="133" id="Hdf-2i-Ru7" customClass="CatCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hdf-2i-Ru7" id="tIh-8a-F5a">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IDM-UV-H46">
+                                            <rect key="frame" x="8" y="4" width="123" height="123"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="123" id="KcO-zW-Tk8"/>
+                                                <constraint firstAttribute="height" constant="123" id="XTU-5p-dS0"/>
+                                            </constraints>
+                                        </imageView>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="hQW-Da-d5I">
+                                            <rect key="frame" x="59" y="56" width="20" height="20"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerY" secondItem="IDM-UV-H46" secondAttribute="centerY" constant="0.5" id="Ogg-NB-PLs"/>
+                                        <constraint firstItem="IDM-UV-H46" firstAttribute="leading" secondItem="tIh-8a-F5a" secondAttribute="leadingMargin" id="epg-5d-9SI"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="activityIndicator" destination="hQW-Da-d5I" id="I6B-PN-J2i"/>
+                                    <outlet property="mainImage" destination="IDM-UV-H46" id="5bS-o0-BUw"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="KittySearchCell" id="9Hy-fe-MPg">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Hy-fe-MPg" id="n8H-us-aEF">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finding you more kitties..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7A-Ue-GBc">
+                                            <rect key="frame" x="202" y="55" width="198" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="BJ6-bh-BPj">
+                                            <rect key="frame" x="410" y="55" width="20" height="20"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="BJ6-bh-BPj" firstAttribute="leading" secondItem="X7A-Ue-GBc" secondAttribute="trailing" constant="10" id="2dL-1J-8Ns"/>
+                                        <constraint firstAttribute="centerY" secondItem="BJ6-bh-BPj" secondAttribute="centerY" constant="1" id="imx-E8-XUO"/>
+                                        <constraint firstAttribute="centerX" secondItem="X7A-Ue-GBc" secondAttribute="centerX" constant="-0.5" id="jL3-lG-vaq"/>
+                                        <constraint firstAttribute="centerY" secondItem="X7A-Ue-GBc" secondAttribute="centerY" constant="0.5" id="sir-76-M2n"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bpo-TV-nw1" id="gcF-gg-NSX"/>
+                            <outlet property="delegate" destination="bpo-TV-nw1" id="Huk-hf-s4a"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Top Cats!" id="fBq-mY-jKU"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="enl-qq-ILR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="765"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dRi-Mf-6Qc">
+            <objects>
+                <navigationController id="Ex0-eD-tSS" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uyd-hg-Ed1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="bpo-TV-nw1" kind="relationship" relationship="rootViewController" id="LYM-1h-cu6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="27y-L5-XAK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-540" y="765"/>
+        </scene>
+    </scenes>
+</document>
